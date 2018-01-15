@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import uniqBy from 'lodash/uniqBy';
 
 class CakeList extends React.Component{
@@ -16,10 +17,11 @@ class CakeList extends React.Component{
   //removes duplicate names and invalid entries before creating li element
     const cakes = this.props.cakes.map((cake, index) => {
       if(cake.name && cake.imageUrl){
-      return <li value={index} key={index} onClick={this.handleClick}>
+      var cakeUrl = "/cakes/" + cake.id;
+      return <Link to={cakeUrl} key={index} value={index} >
         {cake.name}
         <img height="100" src={cake.imageUrl} alt="A cake" />
-      </li>
+      </Link>
       }
     });
 
