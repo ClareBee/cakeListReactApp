@@ -3,14 +3,20 @@ import React from 'react';
 class Cake extends React.Component {
 
   render(){
+
     if(!this.props.cake){
-      return null;
+      return null
     }
-    var chosenCake = this.props.cake;
+    var selectedCake = this.props.cake;
+    console.log(selectedCake);
+
     return(
-      <h1>{chosenCake.name}</h1>
-    )
+      <div>
+        <p>This is the individual cake</p>
+        <p>{selectedCake.name}</p>
+      </div>
+    );
   }
 }
 
-export default Cake
+export default Cake;

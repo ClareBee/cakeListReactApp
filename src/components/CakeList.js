@@ -1,5 +1,5 @@
 import React from 'react';
-import uniqBy from 'lodash/uniqBy';
+// import uniqBy from 'lodash/uniqBy';
 
 class CakeList extends React.Component{
   constructor(props){
@@ -9,13 +9,12 @@ class CakeList extends React.Component{
 
 //gets the index of the cake that the user has clicked on
   handleClick(e){
-    console.log(e.currentTarget.value);
+    this.props.onClick(parseInt(e.currentTarget.value, 10));
   }
 
   render(){
   //removes duplicate names and invalid entries before creating li element
-    let uniqueCakes = uniqBy(this.props.cakes, 'name');
-    const cakes = uniqueCakes.map((cake, index) => {
+    const cakes = this.props.cakes.map((cake, index) => {
       if(cake.name && cake.imageUrl){
       return <li value={index} key={index} onClick={this.handleClick}>
         {cake.name}
