@@ -1,6 +1,5 @@
 import React from 'react';
 import CakeList from '../components/CakeList';
-import Cake from '../components/Cake';
 
 class CakesContainer extends React.Component {
   constructor(props){
@@ -40,8 +39,8 @@ class CakesContainer extends React.Component {
     return(
       <div>
         <h1>This is the cake container</h1>
-        <Cake cake={cake} index={this.state.chosenCake} />
-        <CakeList cakes={this.state.cakes} onClick={this.handleClick}/>
+
+        <CakeList cakes={this.state.cakes} onClick={this.handleClick} cake={cake} index={this.state.chosenCake}/>
       </div>
     )
   }

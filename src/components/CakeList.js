@@ -11,17 +11,18 @@ class CakeList extends React.Component{
 //gets the index of the cake that the user has clicked on
   handleClick(e){
     this.props.onClick(parseInt(e.currentTarget.value, 10));
+    console.log(e.currentTarget.value);
   }
 
   render(){
   //removes duplicate names and invalid entries before creating li element
     const cakes = this.props.cakes.map((cake, index) => {
       if(cake.name && cake.imageUrl){
-      var cakeUrl = "/cakes/" + cake.id;
-      return <Link to={cakeUrl} key={index} value={index} >
+
+      return <li onClick={this.handleClick} key={index} value={index} ><Link key={index} to={`/cakes/${cake.id}`}>
         {cake.name}
         <img height="100" src={cake.imageUrl} alt="A cake" />
-      </Link>
+      </Link></li>
       }
     });
 

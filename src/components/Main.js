@@ -8,13 +8,14 @@ import CakeForm from './CakeForm';
 import Cake from './Cake';
 
 class Main extends React.Component {
+
   render(){
     return(
       <Router>
         <React.Fragment>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route path="/cakes" component={CakesContainer} />
+          <Route exact path="/cakes" component={CakesContainer} />
           <Route path="/cakes/:id" component={Cake} />
           <Route path="/addNewCake" component={CakeForm} />
         </React.Fragment>
