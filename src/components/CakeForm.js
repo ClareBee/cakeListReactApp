@@ -13,8 +13,6 @@ class CakeForm extends React.Component {
           <input type="submit"/>
         </form>
       </React.Fragment>
-
-
     )
   }
 }
