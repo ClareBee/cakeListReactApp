@@ -29,11 +29,15 @@ class Cake extends React.Component {
     if(!this.state.cake){
       return null
     }
+    let cake = this.state.cake;
 
     return(
       <div>
         <p>This is the individual cake</p>
-        <p>{this.state.cake.name}</p>
+        <p>{cake.name}</p>
+        <img height="100" src={cake.imageUrl} alt="Individual cake"/>
+        <p>{cake.comment}</p>
+        <p>Yum Factor: {cake.yumFactor} /5 </p>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Navbar from './Navbar';
@@ -10,13 +10,7 @@ import Cake from './Cake';
 class Main extends React.Component {
 
   render(){
-    // const Cakes = () => (
-    // <Switch>
-    //   <Route exact path='/cakes' component={CakesContainer}/>
-    //   <Route path='/cakes/:id' component={Cake}/>
-    // </Switch>
-    // )
-
+    
     return(
       <Router>
         <React.Fragment>
