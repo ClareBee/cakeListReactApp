@@ -10,7 +10,10 @@ class CakeList extends React.Component{
     let uniqueCakes = uniqBy(this.props.cakes, 'name');
     const cakes = uniqueCakes.map((cake, index) => {
       if(cake.name){
-      return <li value={index} key={index}>{cake.name}</li>
+      return <li value={index} key={index}>
+        {cake.name}
+        <img height="100" src={cake.imageUrl} alt="cake"/>
+      </li>
       }
     });
 
