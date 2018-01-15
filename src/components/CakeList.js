@@ -1,4 +1,5 @@
 import React from 'react';
+import uniqBy from 'lodash/uniqBy';
 
 class CakeList extends React.Component{
   constructor(props){
@@ -6,8 +7,18 @@ class CakeList extends React.Component{
   }
 
   render(){
+    let uniqueCakes = uniqBy(this.props.cakes, 'name');
+    const cakes = uniqueCakes.map((cake, index) => {
+      return <li value={index} key={index}>{cake.name}</li>
+    });
+
     return(
+      <div>
       <h1>This is the cake list</h1>
+      <ul>
+        {cakes}
+      </ul>
+    </div>
     )
   }
 }
