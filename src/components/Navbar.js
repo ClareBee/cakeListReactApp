@@ -8,7 +8,7 @@ const NavBar = () => {
     <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          CakeCakeCake
+          <h1 className="title">CakeCakeCake</h1>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>

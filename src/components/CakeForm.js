@@ -29,6 +29,9 @@ class CakeForm extends React.Component {
     e.preventDefault();
     const newCake = this.state;
     this.addCake(newCake);
+    //clears out form on submission
+    this.refs.cakeForm.reset();
+
   }
 
   addCake(cake){
@@ -48,14 +51,26 @@ class CakeForm extends React.Component {
     console.log(this.state.name);
     return(
       <React.Fragment>
-        <h1>this will be the cake form</h1>
-        <form action="/cakes" method="" onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} required type="text" name="name" placeholder="name of cake"/>
-          <input onChange={this.handleChange} required type="url" name="imageUrl" placeholder="url for an image"/>
-          <input onChange={this.handleChange} required type="number" min="1" max="5" name="yumFactor" placeholder="rating/5"/>
-          <input onChange={this.handleChange} required type="text" name="comment" placeholder="comment"/>
-          <button type="submit">Submit</button>
+        <h1>Add your favourite cake to our database</h1>
+        <div className="form-container">
+          <form className="cake-form" ref="cakeForm" action="/cakes" method="" onSubmit={this.handleSubmit}>
+            <div className="row">
+              <input onChange={this.handleChange} required type="text" name="name" placeholder="Name of the cake"/>
+            </div>
+            <div className="row">
+              <input onChange={this.handleChange} required type="url" name="imageUrl" placeholder="Url for an image"/>
+            </div>
+          <div className="row">
+          <input onChange={this.handleChange} required type="number" min="1" max="5" name="yumFactor" placeholder="Rating/5"/>
+        </div>
+        <div className="row">
+          <input onChange={this.handleChange} required type="text" name="comment" placeholder="Comment"/>
+        </div>
+      <div className="row">
+          <button type="submit">Submit Your Cake!</button>
+        </div>
         </form>
+      </div>
       </React.Fragment>
     )
   }
