@@ -1,3 +1,25 @@
+ul {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  flex-flow: row wrap;
+  list-style: none;
+}
+
+li {
+  margin: 2rem;
+}
+
+img {
+  width: 200px;
+}
+
+
+
+
+
+
+
 .App {
   text-align: center;
 }

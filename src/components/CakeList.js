@@ -14,14 +14,18 @@ class CakeList extends React.Component{
     console.log(e.currentTarget.value);
   }
 
+  addDefaultImage(e){
+    e.target.src = "http://images.hellokids.com/_uploads/_tiny_galerie/20120416/l4n_how-to-draw-a-cake-for-kids-step-6.jpg";
+  }
+
   render(){
   //removes duplicate names and invalid entries before creating li element
     const cakes = this.props.cakes.map((cake, index) => {
-      if(cake.name && cake.imageUrl){
+      if((cake.name && cake.imageUrl) && (cake.name.length > 4)){
 
       return <li onClick={this.handleClick} key={index} value={index} ><Link key={index} to={`/cakes/${cake.id}`}>
+        <img src={cake.imageUrl} alt="A cake" onError={this.addDefaultImage} />
         {cake.name}
-        <img height="100" src={cake.imageUrl} alt="A cake" />
       </Link></li>
       }
     });

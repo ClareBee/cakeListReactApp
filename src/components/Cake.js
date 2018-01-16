@@ -32,13 +32,15 @@ class Cake extends React.Component {
     let cake = this.state.cake;
 
     return(
-      <div>
-        <p>This is the individual cake</p>
-        <p>{cake.name}</p>
+      <figure>
+        <h1>Your Cake</h1>
+        <h2>{cake.name}</h2>
         <img height="100" src={cake.imageUrl} alt="Individual cake"/>
-        <p>{cake.comment}</p>
-        <p>Yum Factor: {cake.yumFactor} /5 </p>
-      </div>
+        <figcaption>
+          <p>Comment: {cake.comment}</p>
+          <p>Yum Factor: {cake.yumFactor} /5 </p>
+        </figcaption>
+      </figure>
     );
   }
 }
