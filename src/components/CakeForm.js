@@ -10,30 +10,25 @@ class CakeForm extends React.Component {
       comment: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.addCake = this.addCake.bind(this);
   }
 
   handleChange(e){
-    const nameInput = e.target.name;
-    const urlInput = e.target.imageUrl;
-    const commentInput = e.target.comment;
-    const ratingInput = e.target.yumFactor;
-    console.log(name.value);
+    console.log(e);
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
 
     this.setState({
-      name: nameInput,
-      imageUrl: urlInput,
-      yumFactor: ratingInput,
-      comment: commentInput
+      [name]: value
     });
   }
   handleSubmit(e){
     console.log("something submitted");
     e.preventDefault();
-    const newCake = new FormData(e.target.value);
-    //fetch post to /cakes url
-    console.log(newCake);
-    // this.addCake(newCake)
+    const newCake = this.state;
+    this.addCake(newCake);
   }
 
   addCake(cake){
