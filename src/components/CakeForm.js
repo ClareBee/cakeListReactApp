@@ -31,7 +31,8 @@ class CakeForm extends React.Component {
     this.addCake(newCake);
     //clears out form on submission
     this.refs.cakeForm.reset();
-
+    //redirects to main page on subission
+    this.props.history.push('/cakes');
   }
 
   addCake(cake){
