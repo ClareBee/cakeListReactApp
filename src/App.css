@@ -19,6 +19,7 @@ a:hover {
   padding-left: 20px;
 }
 div.container {
+  padding-top: 40px;
   margin-bottom: 30px;
   border-bottom: 2px solid #84322E;
 }
@@ -42,6 +43,7 @@ li {
 
 .cake-link {
   display: flex;
+  width: 90%;
   padding: 10px 0 20px 0;
   text-align: center;
   flex-direction: column;
@@ -53,7 +55,7 @@ li {
   transform: scale(0.98);
 }
 .cake-item {
-  width: 25%;
+  width: 30%;
   display: flex;
 }
 .cake-image {
