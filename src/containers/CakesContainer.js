@@ -1,6 +1,5 @@
 import React from 'react';
 import CakeList from '../components/CakeList';
-import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 
 class CakesContainer extends React.Component {
   constructor(props){
@@ -39,9 +38,9 @@ class CakesContainer extends React.Component {
     console.log(cake);
     return(
       <div>
-        <Jumbotron className="title">
-          CakeCakeCake
-        </Jumbotron>
+
+        <h1 className="title">CakeCakeCake</h1>
+
         <CakeList cakes={this.state.cakes} onClick={this.handleClick} cake={cake} index={this.state.chosenCake}/>
       </div>
     )

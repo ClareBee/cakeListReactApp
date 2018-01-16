@@ -23,16 +23,16 @@ class CakeList extends React.Component{
     const cakes = this.props.cakes.map((cake, index) => {
       if((cake.name && cake.imageUrl) && (cake.name.length > 4)){
 
-      return <li onClick={this.handleClick} key={index} value={index} ><Link key={index} to={`/cakes/${cake.id}`}>
+      return <li className="cake-item" onClick={this.handleClick} key={index} value={index} ><Link className="cake-link" key={index} to={`/cakes/${cake.id}`}>
         <img src={cake.imageUrl} alt="A cake" onError={this.addDefaultImage} />
-        {cake.name}
+        <div>{cake.name}</div>
       </Link></li>
       }
     });
 
     return(
       <div>
-      <h1>So many cakes, so little time...</h1>
+      <h3 className="sub-title">So many cakes, so little time...</h3>
       <ul className="cake-list">
         {cakes}
       </ul>
