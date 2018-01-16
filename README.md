@@ -10,7 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Features
 * Fetch requests to API, input validation through HTML5, default images and filter for faulty entries in original API
-* react-router-bootstrap library to use IndexLinkContainer with Links inside React-Bootstrap Navbar Component
+* React-router-bootstrap library to use IndexLinkContainer with Links inside React-Bootstrap Navbar Component (https://github.com/react-bootstrap/react-router-bootstrap)
+* CSS3 Transitions when hovering on list items
 
 ## Getting started
 
