@@ -24,7 +24,7 @@ class CakeList extends React.Component{
       if((cake.name && cake.imageUrl) && (cake.name.length > 4)){
 
       return <li className="cake-item" onClick={this.handleClick} key={index} value={index} ><Link className="cake-link" key={index} to={`/cakes/${cake.id}`}>
-        <img src={cake.imageUrl} alt="A cake" onError={this.addDefaultImage} />
+        <img className="cake-image" src={cake.imageUrl} alt="A cake" onError={this.addDefaultImage} />
         <div>{cake.name}</div>
       </Link></li>
       }

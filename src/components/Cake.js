@@ -33,7 +33,7 @@ class Cake extends React.Component {
 
     return(
       <figure className="individual-cake">
-        <h1>Your Cake</h1>
+        <h1>You chose...</h1>
         <h2>{cake.name}</h2>
         <img height="100" src={cake.imageUrl} alt="Individual cake"/>
         <figcaption>

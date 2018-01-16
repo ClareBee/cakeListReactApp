@@ -35,7 +35,6 @@ class CakesContainer extends React.Component {
   render(){
     //gets selected cake using index from list click event
     var cake = this.state.cakes[this.state.chosenCake];
-    console.log(cake);
     return(
       <div>
         <CakeList cakes={this.state.cakes} onClick={this.handleClick} cake={cake} index={this.state.chosenCake}/>

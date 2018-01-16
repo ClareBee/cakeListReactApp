@@ -52,7 +52,7 @@ class CakeForm extends React.Component {
     console.log(this.state.name);
     return(
       <React.Fragment>
-        <h1>Add your favourite cake to our database</h1>
+        <h1 className="sub-title">Add your favourite cake to our database</h1>
         <div className="form-container">
           <form className="cake-form" ref="cakeForm" action="/cakes" method="" onSubmit={this.handleSubmit}>
             <div className="row">

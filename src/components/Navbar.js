@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {IndexLinkContainer} from 'react-router-bootstrap';
 import { Navbar, Nav, NavItem } from 'react-bootstrap/lib';
 
 const NavBar = () => {
   return(
-    <Navbar>
+    <Navbar className="nav">
       <Navbar.Header>
         <Navbar.Brand>
           <h1 className="title">CakeCakeCake</h1>
