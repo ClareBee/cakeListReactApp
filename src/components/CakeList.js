@@ -32,8 +32,8 @@ class CakeList extends React.Component{
 
     return(
       <div>
-      <h1>This is the cake list</h1>
-      <ul>
+      <h1>So many cakes, so little time...</h1>
+      <ul className="cake-list">
         {cakes}
       </ul>
     </div>

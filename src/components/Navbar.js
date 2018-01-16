@@ -1,14 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {IndexLinkContainer} from 'react-router-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap/lib';
 
-const Navbar = () => {
+const NavBar = () => {
   return(
-    <ul>
-      <li><Link to="/cakes">All cakes</Link></li>
-      <li><Link to="/addNewCake">Add new cake</Link></li>
-    </ul>
+    <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          CakeCakeCake
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <IndexLinkContainer to="/cakes">
+          <NavItem>All Cakes</NavItem>
+        </IndexLinkContainer>
+        <IndexLinkContainer to="/addNewCake">
+          <NavItem>Add New Cake</NavItem>
+        </IndexLinkContainer>
+      </Nav>
+    </Navbar>
   )
 }
 
 
-export default Navbar;
+export default NavBar;

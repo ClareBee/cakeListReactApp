@@ -39,12 +39,10 @@ class CakesContainer extends React.Component {
     console.log(cake);
     return(
       <div>
-        <h1>This is the cake container</h1>
         <Jumbotron className="title">
           CakeCakeCake
         </Jumbotron>
         <CakeList cakes={this.state.cakes} onClick={this.handleClick} cake={cake} index={this.state.chosenCake}/>
-
       </div>
     )
   }
