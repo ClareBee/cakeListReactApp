@@ -41,7 +41,7 @@ class CakeForm extends React.Component {
       body: JSON.stringify(cake),
       headers: new Headers({
       'Content-Type': 'application/json'
-    })
+      })
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
