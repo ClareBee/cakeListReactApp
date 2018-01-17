@@ -19,7 +19,7 @@ const NavBar = () => {
         </IndexLinkContainer>
       </Nav>
     </Navbar>
-  )
+  );
 }
 
 

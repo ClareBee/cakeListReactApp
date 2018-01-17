@@ -10,7 +10,6 @@ class CakeList extends React.Component{
 //gets the index of the cake that the user has clicked on
   handleClick(e){
     this.props.onClick(parseInt(e.currentTarget.value, 10));
-    console.log(e.currentTarget.value);
   }
 
   addDefaultImage(e){
@@ -39,7 +38,8 @@ class CakeList extends React.Component{
           {cakes}
         </ul>
       </div>
-    )
+    );
   }
 }
+
 export default CakeList;

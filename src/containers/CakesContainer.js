@@ -10,7 +10,7 @@ class CakesContainer extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this);
   }
-  
+
   componentDidMount(){
     const cakeUrl = "http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes";
     fetch(cakeUrl)
@@ -22,7 +22,6 @@ class CakesContainer extends React.Component {
     })
     .then(data => {
       this.setState({cakes: data});
-      console.log(data);
     })
     .catch(function(error){
       console.log(error.message);
@@ -40,7 +39,7 @@ class CakesContainer extends React.Component {
       <div>
         <CakeList cakes={this.state.cakes} onClick={this.handleClick} cake={cake} index={this.state.chosenCake}/>
       </div>
-    )
+    );
   }
 }
 
