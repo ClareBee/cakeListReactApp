@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import uniqBy from 'lodash/uniqBy';
 
 class CakeList extends React.Component{
   constructor(props){
@@ -15,6 +14,7 @@ class CakeList extends React.Component{
   }
 
   addDefaultImage(e){
+    //provides fallback for faulty entries in API
     e.target.src = "http://images.hellokids.com/_uploads/_tiny_galerie/20120416/l4n_how-to-draw-a-cake-for-kids-step-6.jpg";
   }
 

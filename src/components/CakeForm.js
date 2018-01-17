@@ -15,17 +15,16 @@ class CakeForm extends React.Component {
   }
 
   handleChange(e){
-    console.log(e);
+// gets input from user
     const target = e.target;
     const value = target.value;
     const name = target.name;
-
     this.setState({
       [name]: value
     });
   }
   handleSubmit(e){
-    console.log("something submitted");
+    //stops page from reloading
     e.preventDefault();
     const newCake = this.state;
     this.addCake(newCake);
@@ -53,6 +52,7 @@ class CakeForm extends React.Component {
     return(
       <React.Fragment>
         <h1 className="sub-title">Add your favourite cake to our database</h1>
+
         <div className="form-container">
           <form className="cake-form" ref="cakeForm" action="/cakes" method="" onSubmit={this.handleSubmit}>
             <div className="row">
@@ -61,17 +61,18 @@ class CakeForm extends React.Component {
             <div className="row">
               <input onChange={this.handleChange} required type="url" name="imageUrl" placeholder="Url for an image"/>
             </div>
-          <div className="row">
-          <input onChange={this.handleChange} required type="number" min="1" max="5" name="yumFactor" placeholder="Rating/5"/>
+            <div className="row">
+              <input onChange={this.handleChange} required type="number" min="1" max="5" name="yumFactor" placeholder="Rating/5"/>
+            </div>
+            <div className="row">
+              <input onChange={this.handleChange} required type="text" name="comment" placeholder="Comment"/>
+            </div>
+
+            <div className="row">
+              <button type="submit">Submit Your Cake!</button>
+            </div>
+          </form>
         </div>
-        <div className="row">
-          <input onChange={this.handleChange} required type="text" name="comment" placeholder="Comment"/>
-        </div>
-      <div className="row">
-          <button type="submit">Submit Your Cake!</button>
-        </div>
-        </form>
-      </div>
       </React.Fragment>
     )
   }
