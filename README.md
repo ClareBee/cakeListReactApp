@@ -2,8 +2,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![Logo of the project](cakes.png)
 
-# CodeTest: Cake App Using React
+# CodeTest: Cake App Using React, external API and ReactRouter
 > A short code test for a front-end developer role
+* User can view a list of all cakes
+* User can click on a list item and see details on a separate view
+* User can add a new cake to the API using a form
+
+### Features
+* Fetch requests to API, input validation through HTML5, default images and filter for faulty entries in original API
+* React-router-bootstrap library to use IndexLinkContainer with Links inside React-Bootstrap Navbar Component (https://github.com/react-bootstrap/react-router-bootstrap)
+* CSS3 Transitions when hovering on list items
 
 ## Getting started
 
@@ -21,3 +29,6 @@ React, React-Router v4, React-Bootstrap, React-Router-Bootstrap
 ## Lighthouse report
 
 PWA 55% (service worker not registered), Accessibility 97%, Best Practices 81%
+
+* Performance could be improved by using Redux rather than a second Fetch request
+* http requests could be replaced by https if access to API was permitted
